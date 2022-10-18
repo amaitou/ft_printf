@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 09:55:05 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:24:37 by amait-ou         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:18:49 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,18 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_printf(const char *s, ...);
-void	ft_printhex(long int address, char *s);
-void	ft_putnbr(int nb);
-void	ft_putnbru(unsigned int nb);
+// Shortcuts
+typedef unsigned int		t_ui;
+typedef unsigned long		t_ul;
+
+// Main Function
+int	ft_printf(const char *s, ...);
+
+// Helpers
+int	ft_putchar(char c);
+int	ft_putstr(char *s);
+int	ft_printhex(t_ul address, char *s);
+int	ft_putsigned(int nb);
+int	ft_putunsigned(t_ui nb);
 
 #endif

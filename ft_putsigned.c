@@ -1,24 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbru.c                                       :+:      :+:    :+:   */
+/*   ft_putsigned.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 15:19:12 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:23:01 by amait-ou         ###   ########.fr       */
+/*   Created: 2022/05/11 17:10:28 by amait-ou          #+#    #+#             */
+/*   Updated: 2022/10/18 15:07:34 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbru(unsigned int nb)
+static int	helper(int nb)
 {
+	int	i;
+
+	i = 0;
+	if (nb <= 0)
+		++i;
+	while (nb)
+	{
+		++i;
+		nb /= 10;
+	}
+	return (i);
+}
+
+int	ft_putsigned(int nb)
+{
+	int	i;
+
+	i = 0;
 	if (nb >= 0 && nb <= 9)
 		ft_putchar(nb + 48);
+	else if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putsigned(nb * (-1));
+	}
 	else
 	{
-		ft_putnbru(nb / 10);
-		ft_putnbru(nb % 10);
+		ft_putsigned(nb / 10);
+		ft_putsigned(nb % 10);
 	}
+	return (helper(nb));
 }

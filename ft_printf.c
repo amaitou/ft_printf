@@ -6,60 +6,50 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:11:52 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:25:12 by amait-ou         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:12:24 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf(const char *s, ...)
+int	ft_printf(const char *s, ...)
 {
 	va_list	args;
+	int		l;
 
 	va_start(args, s);
+	l = 0;
 	while (*s)
 	{
 		if (*s == '%')
 		{
 			++s;
 			if (*s == 'c')
-				ft_putchar(va_arg(args, int));
+				l += ft_putchar(va_arg(args, int));
 			else if (*s == 's')
-				ft_putstr(va_arg(args, char *));
+				l += ft_putstr(va_arg(args, char *));
 			else if (*s == '%')
-				ft_putchar('%');
+				l += ft_putchar('%');
 			else if (*s == 'x')
-				ft_printhex(va_arg(args, long int), "0123456789abcdef");
+				l += ft_printhex(va_arg(args, t_ui), "0123456789abcdef");
 			else if (*s == 'X')
-				ft_printhex(va_arg(args, long int), "0123456789ABCDEF");
+				l += ft_printhex(va_arg(args, t_ui), "0123456789ABCDEF");
 			else if (*s == 'd' || *s == 'i')
-				ft_putnbr(va_arg(args, int));
+				l += ft_putsigned(va_arg(args, int));
 			else if (*s == 'u')
-				ft_putnbru(va_arg(args, unsigned int));
+				l += ft_putunsigned(va_arg(args, t_ui));
 			else if (*s == 'p')
 			{
-				ft_putstr("0x");
-				ft_printhex(va_arg(args, long int), "0123456789abcdef");
+				l += ft_putstr("0x");
+				l += ft_printhex(va_arg(args, t_ul), "0123456789abcdef");
 			}
-
-
 			++s;
 		}
 		else
 		{
-			ft_putchar(*s);
+			l += ft_putchar(*s);
 			++s;
 		}
 	}
-}
-
-int main(void)
-{
-	int i = 50;
-	void *p = &i;
-	ft_printf("My Name Is %s And I'm %u Years Old\n", "Amine", -22);
-	ft_printf("The address of this pointer in lowercase is : %x\n", (long int)p);
-	ft_printf("The address of this pointer in uppercase is : %X\n", (long int)p);
-	ft_printf("The address of this pointer in hexa is : %p", (long int)p);
-	return (0);
+	return (l);
 }
