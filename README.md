@@ -11,12 +11,12 @@ This project consists of two parts:
 - **Mandatory part**
 - **Bonus Part**
 
-> Note: The **Bonus Part** is not that necessary to validate to project, but it gives some extra XPs.
+> Note: The **Bonus Part** is not that necessary to validate the project, but it gives some extra XPs.
 ---
 
 # Mandatory Part
 
-in order to implement your own `printf()` you need to go over each one of this formats:
+in order to implement your own `printf()` you need to go over each one of this string formats:
 
   - `%c` Prints a single character.
   - `%s` Prints a string (as defined by the common C convention).
@@ -31,7 +31,7 @@ in order to implement your own `printf()` you need to go over each one of this f
 
 # What are variadic functions
 
-In other to have this project done you must learn a new `C Concept` which is `Variadic Functions.
+In order to have this project done you must learn a new `C Concept` which is `Variadic Functions`.
 
 in `C Programming Language` function takes a known number of params to deal with, but what if we want to pass an unknown number of params and let the function handle all of them? it's that cool right :)?
 
@@ -45,13 +45,13 @@ void variadic_function(char *s, ...)
 
 let's break this example down so we can see what this weird function does.
 
-first of all, this function returns nothing, the first param is a string but the second one `...` is something to declare to the function that we are about to accept a variable number of params.
+first of all, this function returns nothing, the first parameter is a string but the second one `...` is something to declare to the function that we are about to accept a variable number of params.
 
 learn more about `Variadic Functions` via [`Variadic Functions in c`](https://www.geeksforgeeks.org/variadic-functions-in-c/#:~:text=Variadic%20functions%20are%20functions%20that,of%20arguments%20can%20be%20passed.)
 
 ---
 
-# Thing you will learn in this project
+# Things you will learn in this project
 
 > Variadic Functions
 
