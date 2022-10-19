@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:10:28 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/10/18 15:07:34 by amait-ou         ###   ########.fr       */
+/*   Updated: 2022/10/19 15:32:58 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ static int	helper(int nb)
 
 int	ft_putsigned(int nb)
 {
-	int	i;
-
-	i = 0;
 	if (nb >= 0 && nb <= 9)
 		ft_putchar(nb + 48);
 	else if (nb == -2147483648)
