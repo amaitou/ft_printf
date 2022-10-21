@@ -6,6 +6,7 @@ This is the second project of the **`42Cursus`**. <br />
 The goal of this project is pretty straightforward. recoding `printf()` (not the whole function).
 
 **```Note: I haven't shared the PDF of this project, as well as, I haven't explained anything due to school privacy reasons!```**
+
 ![Screenshot from 2022-10-21 23-51-17](https://user-images.githubusercontent.com/49293816/197301163-04fd5103-e002-4016-afc5-de280d49a254.png)
 
 
