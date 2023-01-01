@@ -1,6 +1,6 @@
 
 ---
-![e6514c15-dfd4-4f5a-9f7c-8637aba9b699](https://user-images.githubusercontent.com/49293816/197352439-a1645630-88cc-45eb-88db-5bb1cbae90b7.png)
+![Quotation-Aristotle-Be-a-free-thinker-and-don-t-accept-everything-you-139-75-05](https://user-images.githubusercontent.com/49293816/210186768-6aa77841-e766-4296-b995-7124b7861d36.jpeg)
 
 ---
 # Ft_printf
@@ -14,7 +14,7 @@ This project consists of two parts:
 - **Mandatory part**
 - **Bonus Part**
 
-> Note: The **Bonus Part** is not that necessary to validate the project, but it gives some extra XPs and spreads **`The Blackhole`**.
+> Note: The **Bonus Part** is not that necessary to validate the project, but it gives some extra XPs and days for the **`The Blackhole`**.
 ---
 
 # Mandatory Part
