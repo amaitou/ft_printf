@@ -8,7 +8,7 @@
 This is the second project of the **`42Cursus`**. <br />
 The goal of this project is pretty straightforward. recoding `printf()` (not the whole function).
 
-**```Note: I haven't shared the PDF of this project, as well as, I haven't explained anything due to school privacy reasons!```**
+**``` Note: I haven't shared the PDF of this project, as well as, I haven't explained anything due to school privacy reasons!```**
 
 This project consists of two parts:
 - **Mandatory part**
@@ -19,7 +19,7 @@ This project consists of two parts:
 
 # Mandatory Part
 
-In order to implement your own `printf()` you need to go over each one of this string formats:
+To implement your own `printf()` you need to go over each one of these string formats:
 
   - `%c` Prints a single character.
   - `%s` Prints a string (as defined by the common C convention).
@@ -34,7 +34,7 @@ In order to implement your own `printf()` you need to go over each one of this s
 
 # What are variadic functions
 
-In order to have this project done you must learn a new `C Concept` which is **`Variadic Functions`**.
+To have this project done you must learn a new `C Concept` which is **`Variadic Functions`**.
 
 in `C Programming Language` function takes a known number of params to deal with, but what if we want to pass an unknown number of params and let the function handle all of them? it's cool right :)?
 
