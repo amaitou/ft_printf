@@ -6,11 +6,11 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:06:13 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/10/17 16:20:57 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/31 03:36:10 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_putchar(char c)
 {

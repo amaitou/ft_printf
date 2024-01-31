@@ -2,25 +2,28 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-CFILES = ft_printf.c ft_putchar.c ft_putstr.c ft_printhex.c ft_putsigned.c ft_putunsigned.c
+INCLUDE_DIR = ./includes
+SOURCE_DIR = ./sources
+
+CFILES = $(wildcard $(SOURCE_DIR)/*.c)
 SOURCES = $(CFILES:.c=.o)
 
-%.o: %.c
-	@echo "compiling \033[1;32m$?\033[0m" 
-	@$(CC) $(CFLAGS) -c $?
+./$(SOURCE_DIR)/%.o: $(SOURCE_DIR)/%.c ./$(INCLUDE_DIR)/ft_printf.h
+	@echo "\033[0;33m[*] compiling $?\033[0m"
+	@$(CC) $(CFLAGS) $< -c -o $@
 
 all: $(NAME)
 
 $(NAME): $(SOURCES)
-	@echo "archiving $@"
+	@echo "\033[0;32m[+] archiving *.o onto $(NAME)\033[0m"
 	@$(AR) rcs $@ $?
 
 clean:
-	@echo "deleting *.c"
-	@rm -f $(SOURCES)
+	@echo "\033[1;31m[!] deleting *.o\033[0m"
+	@rm -rf $(SOURCES) *.out
 
 fclean: clean
-	@echo "deleting libftprintf.a"
+	@echo "\033[1;31m[!] deleting $(NAME) and *.o\033[0m"
 	@rm -f $(NAME)
 
 re: fclean all

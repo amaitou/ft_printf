@@ -6,11 +6,11 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:19:12 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/10/19 15:33:34 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/31 03:36:24 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 static int	helper(t_ui nb)
 {
