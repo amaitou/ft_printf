@@ -15,6 +15,26 @@ This project consists of two parts:
 - **Bonus Part**
 
 > Note: The **Bonus Part** is not that necessary to validate the project, but it gives some extra XPs and days for the **`The Blackhole`**.
+
+---
+
+# Project Structure
+
+```
+|____.gitignore
+|____includes
+| |____ft_printf.h
+|____Makefile
+|____README.md
+|____sources
+| |____ft_printf.c
+| |____ft_printhex.c
+| |____ft_putchar.c
+| |____ft_putsigned.c
+| |____ft_putstr.c
+| |____ft_putunsigned.c
+```
+
 ---
 
 # Mandatory Part
